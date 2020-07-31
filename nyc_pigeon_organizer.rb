@@ -1,3 +1,61 @@
+
+  
 def nyc_pigeon_organizer(data)
-  # write your code here!
+  new_hash = {}
+  data.each do |key, value|
+    value.each do |new_value, names|
+      names.each do |name|
+        
+        if !new_hash[name]
+          new_hash[name] = {}
+        end
+
+        if !new_hash[name][key]
+          new_hash[name][key] = []
+        end
+
+        new_hash[name][key] << new_value.to_s
+
+      end
+    end
+  end
+  new_hash
 end
+
+
+
+
+
+# require "pry"
+
+# def nyc_pigeon_organizer(data)
+#     organized_pigeons = {}
+#     data.each{|attributes, values|
+#         values.each{|trait, names |
+#           names.each{|name|
+
+
+#             if organized_pigeons.include?(name) == false
+#                 organized_pigeons[name] = {}
+#             end
+
+#             if organized_pigeons[name].include?(attributes) ==     false
+#                 organized_pigeons[name][attributes]= []
+#             end
+#             # binding.pry
+#     #0
+
+#             organized_pigeons[name][attributes] << trait.split()
+
+#         }
+     
+#     }
+#     }
+#     binding.pry
+#     organized_pigeons
+#     binding.pry
+#     0
+#     0 
+    
+
+#   end 
