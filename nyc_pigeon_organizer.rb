@@ -14,7 +14,7 @@ def nyc_pigeon_organizer(data)
           organized_pigeons[name][attributes] = []
         end
 
-        organized_pigeons[name][attributes] << trait.split()
+        organized_pigeons[name][attributes] << trait.to_s
 
       end
     end
