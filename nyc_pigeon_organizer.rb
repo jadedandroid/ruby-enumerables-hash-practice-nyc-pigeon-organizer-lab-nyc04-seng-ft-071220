@@ -45,7 +45,7 @@ end
 #             # binding.pry
 #     #0
 
-#             organized_pigeons[name][attributes] << trait.split()
+#             organized_pigeons[name][attributes] << trait.to_s
 
 #         }
      
