@@ -1,25 +1,25 @@
 
   
 def nyc_pigeon_organizer(data)
-  new_hash = {}
-  data.each do |key, value|
-    value.each do |new_value, names|
+  organized_pigeons = {}
+  data.each do |attributes, value|
+    value.each do |trait, names|
       names.each do |name|
         
-        if !new_hash[name]
-          new_hash[name] = {}
+        if !organized_pigeons[name]
+          organized_pigeons[name] = {}
         end
 
-        if !new_hash[name][key]
-          new_hash[name][key] = []
+        if !organized_pigeons[name][attributes]
+          organized_pigeons[name][attributes] = []
         end
 
-        new_hash[name][key] << new_value.to_s
+        organized_pigeons[name][attributes] << trait.split()
 
       end
     end
   end
-  new_hash
+  organized_pigeons
 end
 
 
